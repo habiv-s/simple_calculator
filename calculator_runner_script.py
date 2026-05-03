@@ -2,6 +2,13 @@ from extended_scientific_calculator import ScientificCalculator
 import sys
 
 class CalculatorConsoleInterface(ScientificCalculator):
+    def __init__(self):
+        self.history_log_filename = "calculation_history.txt"
+
+    def log_calculation_to_file(self, formatted_record):
+        """Saves the result to a text file with a timestamp."""
+        pass
+    
     def run_calculator(self):
         """Main interface loop that handles user inputs and manages the logic flow."""
         while True:
