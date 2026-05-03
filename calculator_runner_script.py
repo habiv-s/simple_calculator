@@ -104,3 +104,8 @@ class CalculatorConsoleInterface(ScientificCalculator):
                 elif selected_operator == 'e':
                     calculation_result = self.get_euler_constant()
                 final_formatted_record = f"Constant {selected_operator} = {calculation_result}"
+
+            else:
+                raise NameError(f"The operator '{selected_operator}' is not valid.")
+
+            print(f"RESULT: {calculation_result}")
