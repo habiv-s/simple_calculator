@@ -24,7 +24,7 @@ class CalculatorConsoleInterface(ScientificCalculator):
 
             selected_operator = input("Enter operator: ").strip().lower()
 
-            two_number_operations = ['+', '-', '*', '/', '%', '^']
+            two_number_operations = ['+', '-', '*', '/', '%', '**']
             one_number_operations = [
                 'sqrt', 'sin', 'cos', 'tan', 'asin', 'acos', 'atan',
                 'sinh', 'cosh', 'tanh', 'asinh', 'acosh', 'atanh',
