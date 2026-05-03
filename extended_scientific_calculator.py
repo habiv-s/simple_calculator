@@ -11,11 +11,11 @@ class ScientificCalculator(BasicCalculator):
         return math.tan(math.radians(value))
     #inverse trigo
     def asin(self, value):
-        return math.asin(math.radians(value))
+        return math.degrees(math.asin(value))
     def acos(self, value):
-        return math.acos(math.radians(value))
+        return math.degrees(math.acos(value))
     def atan(self, value):
-        return math.atan(math.radians(value))
+        return math.degrees(math.atan(value))
     #hyperbolic
     def sinh(self, value):
         return math.sinh(value)
