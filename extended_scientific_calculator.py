@@ -42,3 +42,8 @@ class ScientificCalculator(BasicCalculator):
     def exponential(self, value):
         """Calculates e raised to the power of the value (e^x)."""
         return math.exp(value)
+    #advanced arithmetic
+    def factorial(self, value):
+        return math.factorial(value)
+    def absolute_value(self, value):
+        return abs(value)
