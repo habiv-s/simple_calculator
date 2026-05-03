@@ -23,3 +23,14 @@ class ScientificCalculator(BasicCalculator):
         return math.cosh(value)
     def tanh(self, value):
         return math.tanh(value)
+    #inverse hyperbolic
+    def asinh(self, value):
+        return math.asinh(value)
+    def acosh(self, value):
+        if value < 1:
+            raise ValueError("Math Domain Error: acosh is only defined for values greater than or equal to 1.")
+        return math.acosh(value)
+    def atanh(self, value):
+        if not (-1 < value < 1):
+            raise ValueError("Math Domain Error: atanh is only defined for values between -1 and 1.")
+        return math.atanh(value)
