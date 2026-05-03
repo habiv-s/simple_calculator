@@ -44,6 +44,10 @@ class ScientificCalculator(BasicCalculator):
         return math.exp(value)
     #advanced arithmetic
     def factorial(self, value):
-        return math.factorial(value)
+        if value < 0:
+            raise ValueError("Math Error: Factorial is not defined for negative numbers.")
+        if not float(value).is_integer():
+            raise ValueError("Math Error: Factorial requires a whole number (integer).")
+        return math.factorial(int(value))
     def absolute_value(self, value):
         return abs(value)
