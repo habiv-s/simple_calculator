@@ -97,3 +97,10 @@ class CalculatorConsoleInterface(ScientificCalculator):
                     calculation_result = self.convert_to_degrees(first_number)
 
                 final_formatted_record = f"{selected_operator}({first_number}) = {calculation_result}"
+
+            elif selected_operator in constants:
+                if selected_operator == 'pi':
+                    calculation_result = self.get_pi_constant()
+                elif selected_operator == 'e':
+                    calculation_result = self.get_euler_constant()
+                final_formatted_record = f"Constant {selected_operator} = {calculation_result}"
