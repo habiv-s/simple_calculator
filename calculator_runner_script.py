@@ -129,3 +129,12 @@ class CalculatorConsoleInterface(ScientificCalculator):
                 print(f"Error: {known_error}")
             except Exception as unknown_error:
                 print(f"Unexpected Error: {unknown_error}")
+
+            user_continuation_choice = input("\nDo you want to try again? (yes/no): ").strip().lower()
+            if user_continuation_choice != 'yes':
+                print("Thank you!")
+                sys.exit()
+
+if __name__ == "__main__":
+    calculator = CalculatorConsoleInterface()
+    calculator.run_calculator()
