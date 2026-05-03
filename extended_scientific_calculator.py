@@ -16,3 +16,10 @@ class ScientificCalculator(BasicCalculator):
         return math.acos(math.radians(value))
     def atan(self, value):
         return math.atan(math.radians(value))
+    #hyperbolic
+    def sinh(self, value):
+        return math.sinh(value)
+    def cosh(self, value):
+        return math.cosh(value)
+    def tanh(self, value):
+        return math.tanh(value)
