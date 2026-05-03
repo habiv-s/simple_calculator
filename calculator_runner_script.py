@@ -8,9 +8,12 @@ class CalculatorConsoleInterface(ScientificCalculator):
 
     def log_calculation_to_file(self, formatted_record):
         """Saves the result to a text file with a timestamp."""
-        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open(self.history_log_filename, "a") as history_file:
-            history_file.write(f"[{now}] {formatted_record}\n")
+        try:
+            now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            with open(self.history_log_filename, "a") as history_file:
+                history_file.write(f"[{now}] {formatted_record}\n")
+        except IOError:
+            print("File Error: Could not save to the history file.")
 
     def run_calculator(self):
         """Main interface loop that handles user inputs and manages the logic flow."""
