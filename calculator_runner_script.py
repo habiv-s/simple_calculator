@@ -24,15 +24,15 @@ class CalculatorConsoleInterface(ScientificCalculator):
                 print("=" * 40)
 
                 print("""               OPERATORS
-
+                
                 two_number_operations: + - * / % **
-
+                
                 one_number_operations:
                 sqrt sin cos tan asin acos atan
                 sinh cosh tanh asinh acosh atanh
                 log ln exponential factorial
                 abs deg_to_rad rad_to_deg
-
+                
                 constants: pi e""")
                 print("=" * 40)
 
