@@ -6,7 +6,7 @@ class ScientificCalculator(BasicCalculator):
     def sin(self, value):
         return math.sin(math.radians(value))
     def cos(self, value):
-        return math.cos(math.raians(value))
+        return math.cos(math.radians(value))
     def tan(self, value):
         return math.tan(math.radians(value))
     #inverse trigo
@@ -52,3 +52,12 @@ class ScientificCalculator(BasicCalculator):
         return math.factorial(int(value))
     def absolute_value(self, value):
         return abs(value)
+    #unit conversions and constants
+    def convert_to_radians(self, value):
+        return math.radians(value)
+    def convert_to_degrees(self, value):
+        return math.degrees(value)
+    def get_pi_constant(self):
+        return math.pi
+    def get_euler_constant(self):
+        return math.e
