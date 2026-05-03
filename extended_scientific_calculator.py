@@ -44,6 +44,7 @@ class ScientificCalculator(BasicCalculator):
         return math.exp(value)
     #advanced arithmetic
     def factorial(self, value):
+        """Calculates the factorial of a non-negative integer."""
         if value < 0:
             raise ValueError("Math Error: Factorial is not defined for negative numbers.")
         if not float(value).is_integer():
