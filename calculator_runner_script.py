@@ -51,3 +51,6 @@ class CalculatorConsoleInterface(ScientificCalculator):
                     calculation_result = self.power(first_number, second_number)
 
                 final_formatted_record = f"{first_number} {selected_operator} {second_number} = {calculation_result}"
+
+            elif selected_operator in one_number_operations:
+                first_number = float(input("Enter value: "))
