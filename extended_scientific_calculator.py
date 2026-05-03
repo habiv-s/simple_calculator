@@ -34,3 +34,11 @@ class ScientificCalculator(BasicCalculator):
         if not (-1 < value < 1):
             raise ValueError("Math Domain Error: atanh is only defined for values between -1 and 1.")
         return math.atanh(value)
+    #log and exponential
+    def log(self, value):
+        return math.log10(value)
+    def ln(self, value):
+        return math.log(value)
+    def exponential(self, value):
+        """Calculates e raised to the power of the value (e^x)."""
+        return math.exp(value)
