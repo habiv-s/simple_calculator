@@ -1,4 +1,5 @@
 from extended_scientific_calculator import ScientificCalculator
+import datetime
 import sys
 
 class CalculatorConsoleInterface(ScientificCalculator):
@@ -7,8 +8,10 @@ class CalculatorConsoleInterface(ScientificCalculator):
 
     def log_calculation_to_file(self, formatted_record):
         """Saves the result to a text file with a timestamp."""
-        pass
-    
+        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(self.history_log_filename, "a") as history_file:
+            history_file.write(f"[{now}] {formatted_record}\n")
+
     def run_calculator(self):
         """Main interface loop that handles user inputs and manages the logic flow."""
         while True:
@@ -116,3 +119,4 @@ class CalculatorConsoleInterface(ScientificCalculator):
                 raise NameError(f"The operator '{selected_operator}' is not valid.")
 
             print(f"RESULT: {calculation_result}")
+            self.log_calculation_to_file(final_formatted_record)
