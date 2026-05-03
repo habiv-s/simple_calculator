@@ -32,3 +32,7 @@ class CalculatorConsoleInterface(ScientificCalculator):
                 'to_rad', 'to_deg'
             ]
             constants = ['pi', 'e']
+
+            if selected_operator in two_number_operations:
+                first_number = float(input("Enter first number: "))
+                second_number = float(input("Enter second number: "))
