@@ -1,6 +1,9 @@
-def add(a, b): return a + b
-def sub(a, b): return a - b
-def mult(a, b): return a * b
+class BasicCalculator:
+    def add(self, first_number, second_number):
+        return first_number + second_number
 
-print("testing")
-print(add(1, 2))
+    def subtract(self, first_number, second_number):
+        return first_number - second_number
+
+    def multiply(self, first_number, second_number):
+        return first_number * second_number
